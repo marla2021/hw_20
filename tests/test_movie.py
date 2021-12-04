@@ -10,9 +10,9 @@ from setup_db import db
 @pytest.fixture()
 def movie_dao():
     movie_dao = MovieDAO(db.session)
-    movie1 = Movie(id=1, name='Leon', age=74)
-    movie2 = Movie(id=1, name='Fargo', age=79)
-    movie3 = Movie(id=1, name='Soul', age=63)
+    movie1 = Movie(id=1, title='Leon', discription ="ugyuyuy",trailer ="gcfcfc", year=1900, rating= 5,genre_id =5,genre ="drama", director_id =7, director ="Ivan")
+    movie2 = Movie(id=1, title='Fargo',  discription ="dfvsfvs",trailer ="vsv", year=2009, rating= 6,genre_id =4,genre ="action", director_id =5, director ="Jhon")
+    movie3 = Movie(id=1, title='Soul',  discription ="tntndb",trailer ="sbrsvgrr", year=2008, rating= 6,genre_id =2,genre ="mult", director_id =8, director ="Fill")
 
     movie_dao.get_one = MagicMock(return_value=movie1)
     movie_dao.get_all = MagicMock(return_value=[movie1, movie2, movie3])
